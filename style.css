@@ -8,3 +8,54 @@ body {
   width: 100%;
   height: 100%;
 }
+
+#canvas {
+  width: 200px;
+  height: 200px;
+  padding: 10px;
+  margin: 50px;
+}
+
+.moon {
+  border-radius: 51%;
+  overflow: hidden;
+  position: relative;
+  height: 100px;
+  width: 100px;
+  margin: 50px;
+}
+
+.phase5 {
+  background-image: linear-gradient(
+    to right,
+    #ff0 0,
+    #ff0 50%,
+    #000 50%,
+    #000 100%
+  );
+}
+
+.phase5::before {
+  background-color: #000;
+  width: 33.333%;
+}
+
+.moon::before,
+.moon::after {
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+}
+
+.moon::before {
+  border-top-left-radius: 3rem 200%;
+  border-bottom-left-radius: 3rem 200%;
+  right: 50%;
+}
+
+.moon::after {
+  border-top-right-radius: 3rem 200%;
+  border-bottom-right-radius: 3rem 200%;
+  left: 50%;
+}
